@@ -2,30 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <title>Frontend Mentor | Fylo data storage component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
-<body>
+<!--creating flexbox-->
+<body class="d-flex align-item-center justify-content-center vh-100">
+  <main class="container">
+    <!--creating row for logo and progress bar-->
+    <div class="row justify-content-center align-items-end g-4">
+      
+<!--div for logo and icons-->
+      <div class="col-lg-4">
+        <div class="card-custom-left p-4 p-md-5">
+          <img src="./images/logo.svg" alt="Fylo" class="mb-4">
+          <div class="d-flex gap-3">
+            <div class="icon-box"><img src="./images/icon-document.svg" alt="Doc"></div>
+            <div class="icon-box"><img src="./images/icon-folder.svg" alt="Folder"></div>
+            <div class="icon-box"><img src="./images/icon-upload.svg" alt="Upload"></div>
+          </div>
+        </div>
+      </div>
 
-  You’ve used 815 GB of your storage
+<!--div for progress bar-->
+      <div class="col-lg-6 position-relative">
+        <div class="card-custom-right p-4 p-md-5">
+          <p class="text-white mb-3">You’ve used <span class="fw-bold">815 GB</span> of your storage</p>
 
-  185 GB Left
-  
-  0 GB
-  1000 GB
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+          <div class="progress-container mb-2">
+            <div class="progress-fill" style="width: 81.5%;">
+              <div class="progress-dot"></div>
+            </div>
+          </div>
+          
+          <div class="d-flex justify-content-between text-white fw-bold small">
+            <span>0 GB</span>
+            <span>1000 GB</span>
+          </div>
+          <!-- Storage bubble/message-->
+          <div class="storage-bubble">
+            <span class="number">185</span>
+            <span class="unit">GB LEFT</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
 </body>
 </html>
