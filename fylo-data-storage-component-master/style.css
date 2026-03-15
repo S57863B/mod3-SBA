@@ -105,14 +105,3 @@ body {
     border-radius: 10px;
   }
 }
-.storage-bubble::after {
-  content: ""; /* Обязательно для работы псевдоэлемента */
-  position: absolute;
-  bottom: -20px; /* Выносим за нижний край облачка */
-  right: 0;      /* Прижимаем к правому краю */
-  
-  /* Рисуем треугольник через границы */
-  border-width: 20px 20px 0 0; 
-  border-style: solid;
-  border-color: white transparent transparent transparent;
-}
